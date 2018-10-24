@@ -4,7 +4,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
 	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{else}}{{ .Params.Description }}{{end}}">
-    {{ .Hugo.Generator }}
+	{{ .Hugo.Generator }}
+	<meta property="og:image" content="{{ if .IsHome }}/img/avatar.png{{ else }}{{ .Params.image }}{{ end }}" />
     {{ template "_internal/opengraph.html" . }}
 	{{ template "_internal/twitter_cards.html" . }}
     
