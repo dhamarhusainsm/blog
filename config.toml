@@ -1,0 +1,11 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "DhamarHusa.In"
+theme = "rusda"
+paginate= 3
+["params"]
+    description = "Blog seorang tukang ketik kode"
+
+[taxonomies]
+  category = "topik"
+  tag = "label"

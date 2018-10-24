@@ -1,0 +1,30 @@
+{{ define "main" }}
+    {{- with .Title }}
+    <h1 style="font-weight: bold;font-size: 2rem;">{{ . }}</h1>
+    {{- end }}
+    {{- range .Paginator.Pages }}
+        <div class="columns" style="margin: 20px 0px;">
+            <div class="column is-one-fifth"><a href=""><img src="{{ .Params.image }}" alt=""></a></div>
+            <div class="column is-half"><a href="{{ .URL }}"><p class="hover-font" style="font-size: 1.2rem;color:#444444">{{ .Title }}</p></a></div>
+            <div class="column">
+                <time class="post-date"><i class="far fa-calendar" style="opacity:.7;font-size:12px;margin-right:4px;"></i><span style="font-size: 11px;">{{ .Date.Format (.Site.Params.dateFormatToUse | default "01/02/2006 15:04") }}</span></time>
+            </div>
+        </div>
+	{{- end }}
+<!-- <main class="main list" role="main">
+	{{- with .Title }}
+	<header class="main__header">
+		<h1 class="main__title">{{ . }}</h1>
+	</header>
+	{{- end }}
+	{{- with .Content }}
+	<div class="content main__content clearfix">
+		{{ . }}
+	</div>
+	{{- end }}
+	{{- range .Paginator.Pages }}
+		{{- .Render "summary" }}
+	{{- end }}
+</main>
+{{ partial "pagination.html" . }} -->
+{{ end }}

@@ -1,0 +1,14 @@
+<article class="post">
+    <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
+    <time class="post-date"><i class="far fa-calendar"  style="opacity:.7;font-size:12px;margin-right:4px;"></i>{{ .Date.Format (.Site.Params.dateFormatToUse | default "02/01/2006 15:04") }}</time>
+    <div class="label-post"><i class="fas fa-tag" style="opacity:.7;font-size:12px;margin-left:15px;margin-right: 4px;"></i>
+        {{ range .Params.label }}
+        <a class="tag has-background-white is-rounded" href="{{ "/label/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+        {{ . }}
+        </a>
+        {{ end }}
+    </div>
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>
