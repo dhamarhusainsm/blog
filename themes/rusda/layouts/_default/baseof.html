@@ -1,49 +1,27 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div class="columns is-centered" style="margin-top:40px;">
-            <div class="column is-half">
-                {{- block "main" . }}{{- end }}
-            </div>
-            <div class="column is-one-fifth is-offset-1">
-                <div class="author">
-                    <div class="avatar">
-                        <img src="/img/avatar.png" alt="">
-                    </div>
-                    <h1>Dhamar Husain</h1>
-                    <p>Tukang ketik kode.</p>
-                    <div class="info">
-                            Lahir dan besar di Indonesia.<br>
-                            Suka dengan debat dan juga cewek berambut pendek :3<br>
-                            Nge-<i>blog</i> kalau pengen aja.
-                    </div>
-                </div>
-                <div class="small-border"></div>
-                <div class="post-list">
-                    <h1>Postingan</h1>
-                    {{ $events := where .Site.RegularPages.ByDate "Section" "post" }}
-                    {{ range first 15 $events }}
-                    <div class="columns">
-                        <div class="column post-list-img is-narrow is-marginless" style="width:80px;">
-                           <a href="{{ .URL }}"> <img src="{{ .Params.image }}" alt=""></a>
-                        </div>
-                        <div class="post-list-title column is-marginless"><a href="{{ .URL }}"><p>{{ .Title }}</p></a></div>
-                    </div>
-                    {{ end }}
-                    
-                </div>
-                <div class="tag-list">
-                    <h1>Label</h1>
-                    {{ range $name, $taxonomy := .Site.Taxonomies.label }}
-                    {{ with $.Site.GetPage (printf "/label/%s" $name) }}
-                    <a href="{{ .Permalink }}">{{ $name }}</a>
-                    {{ end }}
-                    {{ end }}
-                </div>
+<body>
+    <div class="header" style="background-image: url(/img/header-bg.png);">
+    </div>
+    <div class="">
+        <div class="row ">
+            <div class="col-md-10 col-sm-10 offset-sm-1 offset-md-1">
+                {{- partial "header.html" . -}}
             </div>
         </div>
-        {{- partial "footer.html" . -}}
-    </body>
+    </div>
+    <div style="border:1px solid #dedede;"></div>
+    <div class="container container-fluid" style="padding-top:60px;">
+        <div class="row" >
+            <div class="col-md-7 offset-md-1">
+                {{- block "main" . }}{{- end }}
+            </div>
+            <div class="col-md-3">
+                {{- partial "sidebar.html" . -}}
+            </div>
+        </div>
+    </div>
+    {{- partial "footer.html" . -}}
+</body>
 </html>

@@ -1,0 +1,33 @@
+<div class="author">
+    <div class="avatar">
+        <img src="/img/avatar.png" alt="">
+    </div>
+    <h1>Dhamar Husain</h1>
+    <h2>Tukang ketik kode.</h2>
+    <div style="border-bottom:1px solid #dedede;width: 65px;margin: auto;"></div>
+    <p>
+        Seorang tukang ketik kode yang besar di indonesia.<br>
+        Tertarik dengan catur dan juga cewek <i>Short Hair</i>.
+    </p>
+</div>
+<div class="postingan">
+    <h1><a href="/post/">Postingan</a></h1>
+    {{ $events := where .Site.RegularPages "Section" "post" }}
+    {{ range first 15 $events }}
+    <div class="row post-list">
+        <div class="col-4">
+            <a href="{{ .URL }}"> <img class="post-list-img" src="{{ .Params.image }}" alt=""></a>
+        </div>
+        <div class="col" style="padding-left: 0px;"><a class="post-list-title" href="{{ .URL }}">{{ .Title }}</a></div>
+    </div>
+    {{ end }}
+</div>
+
+<div class="label">
+    <h1><a href="/label/">Label</a></h1>
+    {{ range $name, $taxonomy := .Site.Taxonomies.label }}
+    {{ with $.Site.GetPage (printf "/label/%s" $name) }}
+    <a href="{{ .Permalink }}" class="badge badge-light">{{ $name }}</a>
+    {{ end }}
+    {{ end }}
+</div>

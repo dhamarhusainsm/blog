@@ -1,30 +1,15 @@
 {{ define "main" }}
     {{- with .Title }}
-    <h1 style="font-weight: bold;font-size: 2rem;">{{ . }}</h1>
-    {{- end }}
-    {{- range .Paginator.Pages }}
-        <div class="columns" style="margin: 20px 0px;">
-            <div class="column is-one-fifth"><a href=""><img src="{{ .Params.image }}" alt=""></a></div>
-            <div class="column is-half"><a href="{{ .URL }}"><p class="hover-font" style="font-size: 1.2rem;color:#444444">{{ .Title }}</p></a></div>
-            <div class="column">
-                <time class="post-date"><i class="far fa-calendar" style="opacity:.7;font-size:12px;margin-right:4px;"></i><span style="font-size: 11px;">{{ .Date.Format (.Site.Params.dateFormatToUse | default "01/02/2006 15:04") }}</span></time>
-            </div>
+    <h1 style="font-weight: bold;font-size: 32px;margin-bottom: 23px;">{{ . }}</h1>
+	{{- end }}
+	{{ $events := where .Site.RegularPages "Section" "post" }}
+    {{ range $events }}
+    <div class="row post-list align-content-sm-center" style="margin-bottom: 21px;">
+        <div class="col-md-2 col-sm-12">
+            <a href="{{ .URL }}"> <img width="85" src="{{ .Params.image }}" alt=""></a>
         </div>
-	{{- end }}
-<!-- <main class="main list" role="main">
-	{{- with .Title }}
-	<header class="main__header">
-		<h1 class="main__title">{{ . }}</h1>
-	</header>
-	{{- end }}
-	{{- with .Content }}
-	<div class="content main__content clearfix">
-		{{ . }}
-	</div>
-	{{- end }}
-	{{- range .Paginator.Pages }}
-		{{- .Render "summary" }}
-	{{- end }}
-</main>
-{{ partial "pagination.html" . }} -->
+		<div class="col-md-4 col-sm-12" style="padding-left: 0px;"><a class="post-list-title" href="{{ .URL }}">{{ .Title }}</a></div>
+		<div class="col-md-3 col-sm-2"><small class="text-muted">{{ .Date.Format (.Site.Params.dateFormatToUse | default "02/01/2006 15:04") }}</small></div>
+    </div>
+    {{ end }}
 {{ end }}
