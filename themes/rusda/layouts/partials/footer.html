@@ -1,33 +1,35 @@
 <div class="to-top">
-    <a href="#"><i class="fas fa-2x fa-angle-double-up"></i></a>
+    <a href="#top" id="to-top"><i class="fas fa-2x fa-angle-double-up"></i></a>
 </div>
 <div style="clear:both;"></div>
-<script src="/js/fontawesome.js"></script>
-<script src="/js/jquery-3.3.1.slim.min.js"></script>
-<script src="/js/highlight.min.js"></script>
-<script src="/js/pooper.min.js"></script>
-<script src="/js/script.js"></script>
-<script>
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-hljs.initHighlightingOnLoad();
-$(document).ready(function() {
-
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-  });
-});
-</script>
 <div style="border: 1px solid #dedede;width: 100%;"></div>
 <footer>
     <center>
         <p><i class="far fa-copyright" style="margin-right: 5px;"></i><a href="/">DhamarHusa.In</a></p>
     </center>
 </footer>
+
+
+<!-- Script -->
+<script src="/js/fontawesome.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="/js/popper.min.js"></script>
+<script>
+    
+    $("#to-top").each(function(){
+        $(this).click(function(){ 
+            $('html,body').animate({ scrollTop: 0 }, 'slow');
+            return false; 
+        });
+    });
+    $(document).ready(function () {
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function () {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+        });
+    });
+</script>
