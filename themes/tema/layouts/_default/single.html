@@ -8,6 +8,7 @@
       <!-- post -->
       <article class="post"　itemscope itemtype="http://schema.org/BlogPosting">
         <h1 class="post__title">{{ .Title }}</h1>
+        <img itemprop="thumbnailUrl" class="post__image" src="{{ if and (.Params.image) (ne .Params.image "") }}/{{ .Params.image }}{{ else }}/image/theme/og.png{{ end }}" alt="">
         <p class="post__date">
           <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "02 January 2006" }}</time>
         </p>
