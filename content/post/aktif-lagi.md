@@ -1,6 +1,6 @@
 ---
 title: "Aktif Lagi"
-date: 2019-01-11T07:44:46+07:00
+date: 2019-01-05T07:44:46+07:00
 draft: false
 image: img/aktif-lagi/thumb.png
 tags: 

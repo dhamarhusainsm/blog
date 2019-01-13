@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "id"
 title = "Dhamar's blog"
 theme = 'tema'
-summarylength = 130
+summarylength = 20
 hasCJKLanguage = true
 
 [author]
