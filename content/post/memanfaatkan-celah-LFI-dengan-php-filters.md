@@ -3,6 +3,10 @@ title: "Memanfaatkan Celah LFI Dengan PHP Filters"
 date: 2019-01-10T08:27:56+07:00
 draft: false
 image: img/memanfaatkan-celah-lfi-dengan-php-filters/thumb.png
+tags:
+    - root me
+    - pentest
+    - web
 ---
 
 Halo, Dhamar here...

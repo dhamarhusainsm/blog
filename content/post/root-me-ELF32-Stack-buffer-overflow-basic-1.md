@@ -3,6 +3,9 @@ title: "[Root Me] ELF32 Stack Buffer Overflow Basic 1"
 date: 2019-01-08T22:01:07+07:00
 draft: false
 image: img/root-me-elf32-Stack-buffer-overflow-basic-1/thumb.png
+tags:
+    - root me
+    - Reverse Engginering
 ---
 Halo, Dhamar here ...
 
