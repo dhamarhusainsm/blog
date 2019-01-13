@@ -5,7 +5,7 @@ draft: false
 image: img/root-me-elf32-Stack-buffer-overflow-basic-1/thumb.png
 tags:
     - root me
-    - Reverse Engginering
+    - Binary hacking
 ---
 Halo, Dhamar here ...
 
