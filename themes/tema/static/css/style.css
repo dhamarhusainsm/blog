@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here');
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 *,
 *::after,
 *::before {
@@ -8,7 +8,7 @@
 
 body {
   /* font-family: "Sawarabi Gothic", Meiryo, "メイリオ", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "YuGothic", "游ゴシック", Helvetica, Arial, sans-serif; */
-  font-family: 'Just Me Again Down Here', cursive;
+  font-family: 'Just Another Hand', cursive;
 }
 
 a {
