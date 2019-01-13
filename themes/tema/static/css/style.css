@@ -362,3 +362,8 @@ a:hover {
 .post__containt__image .post__image{
   max-width: 100%;
 }
+.tags-single-item{
+  display: inline-block;
+  color: #444;
+  font-weight: bold;
+}

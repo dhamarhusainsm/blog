@@ -8,6 +8,11 @@
     <main class="main main--single">
       <!-- post -->
       <article class="post" 　itemscope itemtype="http://schema.org/BlogPosting">
+        <center>
+            {{ range .Params.tags }}
+              <a class="tags-single-item" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a> </li>
+            {{ end }}
+          </center>
         <h1 class="post__title">{{ .Title }}</h1>
         <div class="post__containt__image">
           <img itemprop="thumbnailUrl" class="post__image" src="{{ if and (.Params.image) (ne .Params.image "") }}/{{ .Params.image }}{{ else }}/image/theme/og.png{{ end }}" alt="">
