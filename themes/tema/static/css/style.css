@@ -313,7 +313,8 @@ a:hover {
 }
 
 .post-nav-title {
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .post-nav-prev {
