@@ -4,9 +4,8 @@ date: 2019-01-14T21:00:55+07:00
 draft: false
 image: img/upload-gambar-dan-peretasan-website-sekolah/thumb.png
 ---
-_pic not related btw_
 
-berbagi sedikit cerita, jadi pada sekitar 1 tahun yang lalu website sekolah saya terdeface dan ternyata pelakunya adalah adik kelas saya, dia sendiri bilang bahwa ada celah upload file di subdomain untuk ppdb, dimana dia bisa mengunggah shell ke website tersebut dan men-deface, tentu saja yang akan saya bahas disini bukan masalah peretasan tersebut melainkan kerentanan upload file pada php, oke sekarang mari fokus dengan kerentanan pada **PHP upload file**.
+berbagi sedikit cerita, jadi pada sekitar 1 tahun yang lalu website sekolah saya terdeface oleh adik kelas saya, dia sendiri bilang bahwa ada celah upload file di subdomain ppdb, dimana dia bisa mengunggah shell ke website tersebut dan men-deface, tentu saja yang akan saya bahas disini bukan masalah peretasan tersebut melainkan kerentanan upload file pada php, oke sekarang mari fokus dengan kerentanan pada **PHP upload file**.
 
 ## PHP upload file
 
@@ -22,6 +21,7 @@ dan setelah membuat filenya langsung saja dicoba...
 </video> 
 
 Bagus, kodingan berjalan dengan baik termasuk saat mengupload gambar.
+
 
 ## upload file vulnerability
 ![](/img/upload-gambar-dan-peretasan-website-sekolah/step-3.png)
@@ -49,7 +49,7 @@ dengan file php diatas saya bisa menjalan perintah-perintah bash malalui file ph
   Your browser does not support the video tag.
 </video> 
 
-bisa dilihat diatas saya bisa menjalankan perintah-perintah bash dan mendapatkan hasilnya dari file php saya. Tapi sepertinya kalau begini doang belum puas rasanya, saya akan coba ubah tampilan di index.html biar lebih greget, yang saya perlu lakukan adalah memasukan perintah bash yang dapat mengubah isi file index.html dan ini perintahnya `echo "phpnya enggak aman gan!" > ../index.html` langsung saja eksekusi..
+bisa dilihat diatas saya bisa menjalankan perintah-perintah bash dan mendapatkan hasilnya dari file php saya. Tapi sepertinya kalau begini doang belum puas rasanya, saya akan coba ubah isi file index.html dari file saya yang terupload, yang saya perlu lakukan adalah memasukan perintah bash yang dapat mengubah isi file index.html dan ini perintahnya `echo "phpnya enggak aman gan!" > ../index.html` langsung saja eksekusi..
 
 <video autoplay loop>
   <source src="/img/upload-gambar-dan-peretasan-website-sekolah/step-7.mp4" type="video/mp4">
@@ -58,4 +58,4 @@ bisa dilihat diatas saya bisa menjalankan perintah-perintah bash dan mendapatkan
 
 Dan **BOOOM** file index.html berubah. Bisa kalian lihat bahwa celah ini sangatlah berbahaya, apalagi jika si penyerang sangat usil dengan mencari informasi-informasi sensitif yang ada diserver seperti passowrd mysql dll..
 
-Oke cukup sekian untuk pembahasan soal kerentanan upload file di php, sebenernya masih banyak celah di php file upload seperti _**nullbyte**_ dll mungkin akan saya buat postnya tersendiri (biar blog kelihatan hidup hehehe...).
+Oke cukup sekian untuk pembahasan soal kerentanan upload file di php, sebenernya masih banyak celah di php file upload yang bahkan terfilter seperti _**nullbyte**_ dll mungkin akan saya buat postnya tersendiri (biar blog kelihatan hidup hehehe...).
