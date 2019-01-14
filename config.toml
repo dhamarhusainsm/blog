@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://dhamarhusa.in/"
 languageCode = "id"
 title = "Dhamar's blog"
 theme = 'tema'
