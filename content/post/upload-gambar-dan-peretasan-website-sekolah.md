@@ -2,7 +2,7 @@
 title: "Peretasan Website Sekolah Dan Kerentanan Upload File PHP"
 date: 2019-01-14T21:00:55+07:00
 draft: false
-image: img/upload-gambar-dengan-peretasan-website-sekolah/thumb.png
+image: img/upload-gambar-dan-peretasan-website-sekolah/thumb.png
 ---
 _pic not related btw_
 
