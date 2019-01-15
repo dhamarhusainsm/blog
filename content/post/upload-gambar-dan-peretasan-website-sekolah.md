@@ -42,7 +42,7 @@ Ubah isi dari shell.php menjadi seperti ini:
 
 ![](/img/upload-gambar-dan-peretasan-website-sekolah/step-5.png)
 
-dengan file php diatas saya bisa menjalan perintah-perintah bash malalui file php yang saya upload dengan menambah perintah bash ke parameter exec, ok sekarang saya akan upload ulang..
+dengan file php diatas saya bisa menjalan perintah-perintah bash malalui file php yang saya upload dengan menambah perintah bash ke parameter exec atau juga dikenal dengan RCE (Remote Command Execution), ok sekarang saya akan upload ulang..
 
 <video autoplay loop>
   <source src="/img/upload-gambar-dan-peretasan-website-sekolah/step-6.mp4" type="video/mp4">
@@ -59,3 +59,6 @@ bisa dilihat diatas saya bisa menjalankan perintah-perintah bash dan mendapatkan
 Dan **BOOOM** file index.html berubah. Bisa kalian lihat bahwa celah ini sangatlah berbahaya, apalagi jika si penyerang sangat usil dengan mencari informasi-informasi sensitif yang ada diserver seperti passowrd mysql dll..
 
 Oke cukup sekian untuk pembahasan soal kerentanan upload file di php, sebenernya masih banyak celah di php file upload yang bahkan terfilter seperti _**nullbyte**_ dll mungkin akan saya buat postnya tersendiri (biar blog kelihatan hidup hehehe...).
+
+## Update
+jika kalian cari bagaimana kode file upload php yang aman, bisa bukak halaman ini:http://www.nobsec.net/2018/12/form-upload-vulnerability-dan-cara.html
