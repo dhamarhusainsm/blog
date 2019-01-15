@@ -15,7 +15,7 @@ Upload file merupakan kegiatan pengiriman file dari client (pengunjung web) ke s
 
 dan setelah membuat filenya langsung saja dicoba...
 
-<video autoplay loop>
+<video autoplay muted loop>
   <source src="/img/upload-gambar-dan-peretasan-website-sekolah/step-2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -28,7 +28,7 @@ Bagus, kodingan berjalan dengan baik termasuk saat mengupload gambar.
 
 Bisa dilihat source code dari upload.php terlihat bahwa tidak ada pemeriksaan jenis file yang terupload, hm.... mari coba buat file php bernama shell.php dengan isi `<?php echo "Oke!" ?>` dan upload ke server untuk mengetahui apakah saya bisa mengirim file php dan mengaksesnya
 
-<video autoplay loop>
+<video autoplay muted loop>
   <source src="/img/upload-gambar-dan-peretasan-website-sekolah/step-4.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
@@ -44,14 +44,14 @@ Ubah isi dari shell.php menjadi seperti ini:
 
 dengan file php diatas saya bisa menjalan perintah-perintah bash malalui file php yang saya upload dengan menambah perintah bash ke parameter exec atau juga dikenal dengan RCE (Remote Command Execution), ok sekarang saya akan upload ulang..
 
-<video autoplay loop>
+<video autoplay muted loop>
   <source src="/img/upload-gambar-dan-peretasan-website-sekolah/step-6.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
 bisa dilihat diatas saya bisa menjalankan perintah-perintah bash dan mendapatkan hasilnya dari file php saya. Tapi sepertinya kalau begini doang belum puas rasanya, saya akan coba ubah isi file index.html dari file saya yang terupload, yang saya perlu lakukan adalah memasukan perintah bash yang dapat mengubah isi file index.html dan ini perintahnya `echo "phpnya enggak aman gan!" > ../index.html` langsung saja eksekusi..
 
-<video autoplay loop>
+<video autoplay muted loop>
   <source src="/img/upload-gambar-dan-peretasan-website-sekolah/step-7.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
