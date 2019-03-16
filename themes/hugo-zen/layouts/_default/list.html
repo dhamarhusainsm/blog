@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+	<main role="main">
+		<h1 class="list-title" style="display: inline-block;margin: 0px auto;margin-bottom: 2rem;padding-right: 35px;text-align: center;color:black;font-weight: bold;font-size: 2.5rem;border-bottom:4px solid #ffea00;">{{ .Title }}</h1>
+{{ range .Data.Pages.ByDate.Reverse }}
+		<article class="entry" itemscope itemtype="http://schema.org/Blog">
+			<h2 style="display: inline-block;font-weight: bold;" itemprop="headline"><a style="color:black;text-decoration: none;" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+			<span style="display: inline-block;margin-left: 18px;opacity: .5;"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+		</article>
+{{ end }}
+	</main>
+
+{{ partial "footer.html" . }}

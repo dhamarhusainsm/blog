@@ -1,21 +1,12 @@
-baseurl = "https://dhamarhusa.in/"
-languageCode = "id"
-title = "Dhamar's blog"
-theme = 'tema'
-summarylength = 20
-hasCJKLanguage = true
-
-[author]
- author = 'dhamar'
- profile = 'Seorang full stack web developer tinggal di jawa tengah, indonesia.'
- image = 'image/theme/profile.jpg'
-
-[Params]
- localeOgp = "id"
- description = "ini cuman blog pribadi tidak lebih"
- keywords = "indonesia,linux,programmer,Web,pribadi,dhamarhusainsm"
- twitter = ""
- github = "dhamarhusainsm"
- facebook = "dhamarhusainsm"
- googleanalytics = " UA-121887690-1 "
- googlecustomsearch = "003263178205246839651:jrhhbtpuctm"
+baseurl = "http://rakuishi.com/"
+languageCode = "ja"
+title = "DhamarHusa.In"
+author = "Dhamar Husain"
+copyright = "dhamarhusa.in All rights reserved."
+googleanalytics = ""
+theme = "hugo-zen"
+paginate = 7
+canonifyURLs = true
+[params]
+  subtitle = "Ini Cuman Blog Pribadi."
+  logo      = "/img/avatar.jpg"

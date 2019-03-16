@@ -1,0 +1,58 @@
+{{ partial "header.html" . }}
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h2 class="entry-title" itemprop="headline"><a href="{{ .RelPermalink }}" style="text-align: center;margin: auto;">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</a></h2>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+			<div style="display: inline-block;margin-left: 20px;">
+				{{ range .Params.tags }}
+				<span><a href="/tags/{{ . | urlize }}" style="color:#000;text-decoration: none;font-size: 14px;color:#000;padding: 0px 3px;">#{{ . }}</a> </span>
+				{{ end }}
+			</div>
+			<div class="entry-text">
+				{{ .Content }}
+			</div>
+		</article>
+
+		<div class="nav" style="display: flex;flex-wrap: wrap;">
+			<div class="navPrev" style="flex: 1;text-align: left;">
+				{{ if .PrevInSection }}
+				<a href="{{ .PrevInSection.URL }}" class="left arrow"  style="color:#000;font-weight: bolder;text-decoration: none;">
+					&laquo;{{ .PrevInSection.Title }}
+				</a>
+				{{ end }}
+			</div>
+			<div class="navNext" style="flex: 1;text-align: right">
+				{{ if .NextInSection }}
+				<a href="{{ .NextInSection.URL }}" class="right arrow" style="color:#000;font-weight: bolder;text-decoration: none;">
+					{{ .NextInSection.Title }}&raquo;
+				</a>
+				{{ end }}
+			</div>
+		</div>
+		<div id="comment"> 
+				<div id="disqus_thread"></div>
+				<script>
+				
+				/**
+				*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+				/*
+				var disqus_config = function () {
+				this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://dhamarhusa-in-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+								    
+		</div>
+	</main>
+
+{{ partial "footer.html" . }}
