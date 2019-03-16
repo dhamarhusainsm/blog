@@ -4,6 +4,7 @@ date: 2019-03-16T17:40:46+07:00
 draft: false
 tags:
 - security
+image: /img/525141.png
 ---
 {{< lazyimg src="/img/525141.png" >}}
 Ya, habis ganti tampilan dan dengan <s>bodohnya</s> tidak sengaja ngehapus artikel2 sebelumnya, kali ini mau membahas soal PTS (Penilaian Tengah Semester) Online yang baru saja dilaksanakan di sekolahan saya untuk pertama kalinya. Awalnya saya sendiri sudah curiga akan PTS Online ini mengingat jumlah laptop/pc yang ada di sekolan tidak banyak dibandingkan dengan jumlah peserta PTS.
